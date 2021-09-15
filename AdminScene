@@ -1,0 +1,26 @@
+import javafx.scene.control.Button;
+
+public class AdminScene extends SceneBasic
+{
+	private AdminAccount account;
+	
+	public AdminScene()
+	{
+		super("Adminisitarator Menu");
+		Button listAcc = new Button ("List Accounts");
+		Button changePass = new Button ("Change Password");
+		Button logOut = new Button("Log Out");
+		
+		listAcc.setOnAction(e-> SceneManager.setAccountListScene(account));
+		changePass.setOnAction(e->SceneManager.setChangePasswordScene(account));
+		logOut.setOnAction(e->SceneManager.setLogOutScene(account));
+		layout.getChildren().addAll(listAcc,changePass,logOut);
+	}
+	
+	public void setAccount(AdminAccount currentAccount)
+	{
+		account = currentAccount;
+	}
+	
+	
+}
