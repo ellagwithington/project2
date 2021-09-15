@@ -1,0 +1,22 @@
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+
+public abstract class SceneBasic 
+{
+	private Scene scene;
+	protected VBox layout;
+	
+	public  SceneBasic(String titleText)
+	{
+		Label label = new Label(titleText);
+		layout = new VBox();
+		layout.getChildren().add(label);
+		scene = new Scene(layout);
+	}
+	
+	public Scene getScene()
+	{
+		return scene;
+	}
+}
