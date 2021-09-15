@@ -6,10 +6,10 @@ public class AdminScene extends SceneBasic
 	
 	public AdminScene()
 	{
-		super("Adminisitarator Menu");
-		Button listAcc = new Button ("List Accounts");
-		Button changePass = new Button ("Change Password");
-		Button logOut = new Button("Log Out");
+		super("Adminisitarator Menu");//sets large label to "Administarator Menu"
+		Button listAcc = new Button ("List Accounts");//button to go to AccountListScene
+		Button changePass = new Button ("Change Password");//button to go to ChangePasswordScene
+		Button logOut = new Button("Log Out");// button to go to LogOutScene
 		
 		listAcc.setOnAction(e-> SceneManager.setAccountListScene(account));
 		changePass.setOnAction(e->SceneManager.setChangePasswordScene(account));
@@ -17,6 +17,7 @@ public class AdminScene extends SceneBasic
 		layout.getChildren().addAll(listAcc,changePass,logOut);
 	}
 	
+	//sets account variable to the Admin account currently logged in
 	public void setAccount(AdminAccount currentAccount)
 	{
 		account = currentAccount;
