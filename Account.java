@@ -4,7 +4,6 @@
 //  Methods for getting a username, verifying a password,
 // changing a password, and printing account information
 //********************************************************************
-import java.util.Scanner; // Import the Scanner class
 
 public abstract class Account {
 
@@ -33,17 +32,8 @@ public abstract class Account {
   //-----------------------------------------------------------------
   //  Verifies password then changes account password.
   //-----------------------------------------------------------------
-  public void changePassword() {
-    Scanner scan = new Scanner(System.in); // Create a Scanner object
-    System.out.println("Enter your password: ");
-    String enteredPassword = scan.nextLine();
-    if (verifyPassword(enteredPassword) == true) {
-      System.out.println("Enter your new password: ");
-      String newPassword = scan.nextLine();
-      password = newPassword;
-    } else {
-      System.out.println("ERROR: Invalid password");
-    }
+  public void setPassword(String pwd) {
+   String newPassword = pwd;
   }
 
   //-----------------------------------------------------------------
@@ -56,6 +46,4 @@ public abstract class Account {
 
     return result;
   }
-
-  public abstract void session();
 }
