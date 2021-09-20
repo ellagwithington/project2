@@ -1,3 +1,7 @@
+/*Lily Davis
+ *Project 4
+ *basic scene superclass for all other scene classes
+ */
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
