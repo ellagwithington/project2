@@ -1,3 +1,8 @@
+/*Lily Davis
+ *Project 4
+ *Creates the scene for the user to login
+ */
+
 import java.util.ArrayList;
 
 import javafx.scene.control.Button;
