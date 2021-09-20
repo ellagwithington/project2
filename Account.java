@@ -28,7 +28,15 @@ public abstract class Account {
       return false;
     }
   }
-
+  
+  //-----------------------------------------------------------------
+  //Added by Lily
+  //returns the Username
+  //-----------------------------------------------------------------
+  public String getUsername()
+  {
+    return ""+username;
+  }
   //-----------------------------------------------------------------
   //  Verifies password then changes account password.
   //-----------------------------------------------------------------
