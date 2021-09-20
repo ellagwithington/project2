@@ -41,7 +41,7 @@ public abstract class Account {
   //  Verifies password then changes account password.
   //-----------------------------------------------------------------
   public void setPassword(String pwd) {
-   String newPassword = pwd;
+   String newPassword = pwd;//shouldnt this change the password variable? -Lily
   }
 
   //-----------------------------------------------------------------
