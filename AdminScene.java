@@ -1,3 +1,7 @@
+/*Lily Davis
+ *Project 4
+ *administrator scene class. has options to logout, list accoutns, or change password
+ */
 import javafx.scene.control.Button;
 
 public class AdminScene extends SceneBasic
