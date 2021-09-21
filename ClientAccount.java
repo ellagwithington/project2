@@ -14,23 +14,4 @@ public class ClientAccount extends Account {
     super(username, password);
     profile = profileInput;
   }
-
-  public void session() {
-    ClientMenu clientMenu = new ClientMenu();
-    Boolean showMenu = true;
-    Integer choice = 0;
-    while (showMenu) {
-      clientMenu.getMenu();
-      choice = clientMenu.getChoice();
-      if (choice == 1) {
-        super.changePassword();
-      }
-      if (choice == 2) {
-        System.out.println(profile);
-      }
-    if (choice == 0) {
-      showMenu = false;
-      }
-    }
-  }
 }

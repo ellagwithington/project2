@@ -28,12 +28,20 @@ public abstract class Account {
       return false;
     }
   }
-
+  
+  //-----------------------------------------------------------------
+  //Added by Lily
+  //returns the Username
+  //-----------------------------------------------------------------
+  public String getUsername()
+  {
+    return ""+username;
+  }
   //-----------------------------------------------------------------
   //  Verifies password then changes account password.
   //-----------------------------------------------------------------
   public void setPassword(String pwd) {
-   String newPassword = pwd;
+   String newPassword = pwd;//shouldnt this change the password variable? -Lily
   }
 
   //-----------------------------------------------------------------
