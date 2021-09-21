@@ -1,6 +1,6 @@
 /*Ella Withington
  *Project 4
- *scene that admin's acces to list all accounts in system
+ *Scene that displays a client's profile
  */
 
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import javafx.scene.layout.GridPane;
 
 public class AccountListScene extends SceneBasic
 {
-	private ArrayList<Account> accounts;//list of accounts
-	private AdminAccount currentAccount;// account being accessed by user
+	
+	private ClientAccount currentAccount;// account being accessed by user
 	
 	public AccountListScene (ArrayList<Account> accounts)
 	{
@@ -21,7 +21,7 @@ public class AccountListScene extends SceneBasic
 		this.accounts = accounts;
 		GridPane display = new GridPane();//container holding list of accounts and their type
 		
-		Label labelU = new Label("insert profile here");//label for username column
+		Label labelU = new Label(currentAccount.profile);//label for username column
 		
 		display.add(labelU,0,0);
 		
@@ -37,7 +37,7 @@ public class AccountListScene extends SceneBasic
 	}
 	
   //sets the currentAccount variable
-	public void setAccount(AdminAccount currentAccount)
+	public void setAccount(ClientAccount currentAccount)
 	{
 		this.currentAccount = currentAccount;
 	}

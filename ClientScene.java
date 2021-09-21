@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 
 public class ClientScene extends SceneBasic{
 
-	private ClientAccount currentAccount;
+	public ClientAccount currentAccount;
 	
 			
 		public ClientScene() {
@@ -22,7 +22,7 @@ public class ClientScene extends SceneBasic{
 		Button change = new Button("Change Password");//change password button
 		change.setOnAction(e-> SceneManager.setChangePasswordScene(account));//
 		Button logout = new Button("Logout");//logout button
-		logout.setOnAction(e-> SceneManager.setLoginScene());//
+		logout.setOnAction(e-> SceneManager.setLoginScene());
 		layout.getChildren().addAll(profile, change, logout);
 	}
 	
