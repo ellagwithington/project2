@@ -21,20 +21,13 @@ public class AccountListScene extends SceneBasic
 		this.accounts = accounts;
 		GridPane display = new GridPane();//container holding list of accounts and their type
 		
-		Label labelU = new Label("Username:");//label for username column
-		Label labelA = new Label("Account: ");//label for account type column
+		Label labelU = new Label("insert profile here");//label for username column
+		
 		display.add(labelU,0,0);
-		display.add(labelA,0,1);
-		for(int i=0; i<accounts.size();i++)
-		{
-			display.add(new Label(accounts.get(i).getUsername()),i,0);
-			if(accounts.get(i) instanceof AdminAccount)
-				display.add(new Label("Administrator"),i,1);
-			else display.add(new Label("Client"),i,1);
-		}
+		
 		layout.getChildren().add(display);
 		Button clientMenu = new Button("ClientMenu");
-		adminMenu.setOnAction(e-> SceneManager.setClientScene(currentAccount));
+		clientMenu.setOnAction(e-> SceneManager.setClientScene(currentAccount));
 		Button logOut = new Button("log out");
 		logOut.setOnAction(e-> SceneManager.setLoginScene());
 		layout.getChildren().add(clientMenu);

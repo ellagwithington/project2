@@ -8,14 +8,15 @@ import java.util.ArrayList;
 import javafx.scene.control.Button;
 
 
-public class ClientScene extends SceneBasic
-{
+public class ClientScene extends SceneBasic{
 
 	private ClientAccount currentAccount;
 	
-		super("Client Menu");		
+			
 		public ClientScene() {
-	
+		
+		super("Client Menu");	
+
 		Button profile = new Button("Show profile");//profile button
 		profile.setOnAction(e->  SceneManager.setProfileScene(account));//
 		Button change = new Button("Change Password");//change password button
