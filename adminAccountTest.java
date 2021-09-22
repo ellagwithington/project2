@@ -27,14 +27,14 @@ class AdminAccountTest {
 	//tests the getUsername method
 	@Test
 	void testGetUsername() {
-		assert(admin.getUsername().equals("admin1")):"GetUserName failed";
+		assert(admin.getUsername().equals("admin1"));
 	}
 	
 	//tests the verifyPassword method
 	@Test
 	void testVerifyPassword()
 	{
-		assert(admin.verifyPassword("12345")): "VerifyPassword Failed";
+		assert(admin.verifyPassword("12345"));
 	}
 	
 	//tests the setPassword method
@@ -42,14 +42,14 @@ class AdminAccountTest {
 	void testSetPassword()
 	{
 		admin.setPassword("67890");
-		assert(admin.verifyPassword("67890")): "SetPassword Failed";
+		assert(admin.verifyPassword("67890"));
 	}
 	
 	//tests the toString method
 	@Test
 	void testToString()
 	{
-		assert(admin.toString().equals("\nUsername: " + "admin1"+ "\nClass Type: " + admin.getClass()):"ToString failed");
+		assert(admin.toString().equals("\nUsername: " + "admin1"+ "\nClass Type: " + admin.getClass()));
 	}
 
 }
