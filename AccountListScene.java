@@ -17,7 +17,7 @@ public class AccountListScene extends SceneBasic
 	
 	public AccountListScene (ArrayList<Account> accounts)
 	{
-		super("Account List Menu");
+		super("User Profile");
 		this.accounts = accounts;
 		GridPane display = new GridPane();//container holding list of accounts and their type
 		
